@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+
+# local market data / logs -- keep raw tape out of the repo
+*.log
+*.csv
+*.parquet
+data/
