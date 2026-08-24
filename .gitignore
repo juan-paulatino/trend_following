@@ -11,4 +11,6 @@ venv/
 *.log
 *.csv
 *.parquet
+*.jsonl
 data/
+tape/

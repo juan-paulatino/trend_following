@@ -13,6 +13,7 @@ The package separates two classes of evidence:
                   invalidation conditions.
 """
 
+from .bybit import BybitAssembler, Emitted
 from .features import (
     BookSample,
     Bucket,
@@ -26,7 +27,9 @@ from .phases import Classified, Episode, Phase, PhaseMachine, Thresholds
 __all__ = [
     "BookSample",
     "Bucket",
+    "BybitAssembler",
     "Candle",
+    "Emitted",
     "TickDirection",
     "Trade",
     "build_candle",

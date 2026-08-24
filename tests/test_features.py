@@ -429,5 +429,37 @@ check(f"realised payoff {reward:.2f}% vs {risk:.2f}% excursion = {reward/risk:.1
       reward / risk > 10)
 
 # ==========================================================================
+print("\n17. Volatility baseline survives candles that close where they opened")
+# ==========================================================================
+# On a thin sub-penny instrument many minutes close exactly at their open. A
+# median of |close - open| collapses to zero and silently disables the whole
+# normalisation -- so the baseline uses the intrabar RANGE and is floored at
+# one tick.
+m7 = PhaseMachine()
+for _ in range(30):
+    # closes exactly at open, but the bar has real intrabar range
+    m7.update(
+        mk([
+            Trade(1.0, 0.04900, 50, True, TD.PLUS),
+            Trade(20.0, 0.04903, 50, True, TD.PLUS),
+            Trade(40.0, 0.04900, 50, False, TD.MINUS),
+        ])
+    )
+base7 = m7.vol_baseline_pct(4)
+check(f"baseline = {base7:.4f}% rather than collapsing to 0", base7 > 0)
+
+# Now the pathological case: zero range on every candle. The floor must hold.
+m8 = PhaseMachine()
+for _ in range(30):
+    m8.update(mk([Trade(1.0, 0.04900, 50, True), Trade(30.0, 0.04900, 50, False)]))
+base8 = m8.vol_baseline_pct(1)
+tick_pct = TICK / 0.04900 * 100
+check(f"zero-range candles -> floored at 1 tick ({base8:.4f}% vs {tick_pct:.4f}%)",
+      abs(base8 - tick_pct) < 1e-9)
+check("so price_effect_z is still defined",
+      m8.vol_baseline_pct(4) > 0)
+print("  -> below the price grid there is nothing to normalise against")
+
+# ==========================================================================
 print(f"\n{'=' * 62}\n{ok} passed, {fail} failed\n{'=' * 62}")
 raise SystemExit(1 if fail else 0)
