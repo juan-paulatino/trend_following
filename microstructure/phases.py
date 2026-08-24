@@ -141,20 +141,31 @@ class PhaseMachine:
         self.t = thresholds or Thresholds()
         self._absorption: Deque[float] = deque(maxlen=history)
         self._volume: Deque[float] = deque(maxlen=history)
-        self._abs_move_pct: Deque[float] = deque(maxlen=history)
+        self._range_pct: Deque[float] = deque(maxlen=history)
+        self._tick_pct: float = 0.0
         self.phase: Phase = Phase.NEUTRAL
         self.setup_age: int = 0
         self.episode: Optional[Episode] = None
 
     def vol_baseline_pct(self, n_candles: int = 1) -> float:
-        """Median absolute per-candle move, scaled to an n-candle window by
-        sqrt(n) (random-walk scaling). The denominator for normalising an
-        episode's price effect."""
-        if len(self._abs_move_pct) < 20:
+        """Typical price movement over an n-candle window, in percent.
+
+        Uses the median intrabar RANGE (high-low), not |close-open|. On a thin
+        sub-penny instrument a large share of minutes close exactly where they
+        opened, so the median of |close-open| collapses to zero and silently
+        disables normalisation altogether -- which is precisely what happened
+        the first time this ran.
+
+        Floored at one tick: below the price grid, normalisation is
+        meaningless, since price physically cannot move less than one tick.
+
+        Scaled by sqrt(n) for the window length (random-walk scaling).
+        """
+        if len(self._range_pct) < 20:
             return 0.0
-        ordered = sorted(self._abs_move_pct)
+        ordered = sorted(self._range_pct)
         med = ordered[len(ordered) // 2]
-        return med * (n_candles ** 0.5)
+        return max(med, self._tick_pct) * (n_candles ** 0.5)
 
     def _open_episode(self, c: Candle) -> None:
         self.episode = Episode(start_close=c.open, lowest=c.low)
@@ -202,7 +213,8 @@ class PhaseMachine:
         self._absorption.append(c.absorption_per_tick)
         self._volume.append(c.volume)
         if c.open > 0 and not c.no_trades:
-            self._abs_move_pct.append(abs(c.close - c.open) / c.open * 100.0)
+            self._range_pct.append((c.high - c.low) / c.open * 100.0)
+            self._tick_pct = c.tick_size / c.open * 100.0
 
         # ---- zero-trade candle: not missing data, it is maximal exhaustion ----
         if c.no_trades:
