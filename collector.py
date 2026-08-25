@@ -52,6 +52,7 @@ class Runner:
         self.lock = threading.Lock()  # pybit dispatches on socket threads
         self.n_candles = 0
         self.n_gaps = 0
+        self._tick_warned = False
 
     def handle(self, msg: dict, record: bool = True) -> None:
         with self.lock:
@@ -59,6 +60,20 @@ class Runner:
                 self.tape.write(json.dumps(msg, separators=(",", ":")) + "\n")
             for em in self.assembler.on_message(msg):
                 self._on_candle(em)
+            self._check_tick_size()
+
+    def _check_tick_size(self) -> None:
+        """Warn once if --tick-size disagrees with the observed tape."""
+        if self._tick_warned or self.n_candles < 5:
+            return
+        warning = self.assembler.tick_size_warning()
+        if warning:
+            print(f"\n*** TICK SIZE WARNING: {warning}\n"
+                  f"    Restart with --tick-size "
+                  f"{self.assembler.observed_tick_size():g} for correct "
+                  f"impact metrics. The recorded tape is unaffected and can be "
+                  f"replayed with the right value.\n")
+        self._tick_warned = True
 
     def _on_candle(self, em) -> None:
         self.n_candles += 1

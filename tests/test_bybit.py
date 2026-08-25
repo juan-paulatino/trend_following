@@ -219,5 +219,32 @@ check("unchanged price in the NEW candle inherits prior direction -> ZeroMinusTi
       nxt.candle.zero_minus_ticks == 1)
 check("not left undetermined", nxt.candle.undetermined_ticks == 0)
 
+print("\n7. Misconfigured tick_size is detected from the tape")
+# ==========================================================================
+# Reproduces the real mistake: TRXUSDT collected with --tick-size 0.00001
+# when its actual tick is 0.0001, silently inflating every tick-based metric
+# by 10x.
+a = BybitAssembler(tick_size=0.00001)
+for i, px in enumerate([0.3373, 0.3374, 0.3375, 0.3374, 0.3376]):
+    a.on_message(trade_msg(M0 + 1000 + i * 1000, "Buy", 100, px, "PlusTick"))
+check(f"observed increment = {a.observed_tick_size():g}",
+      abs(a.observed_tick_size() - 0.0001) < 1e-9)
+warn = a.tick_size_warning()
+check("mismatch flagged", warn is not None)
+check("factor reported", warn is not None and "10x larger" in warn)
+print(f"    {warn}")
+
+# Correctly configured -> silent.
+b = BybitAssembler(tick_size=0.0001)
+for i, px in enumerate([0.3373, 0.3374, 0.3375]):
+    b.on_message(trade_msg(M0 + 1000 + i * 1000, "Buy", 100, px, "PlusTick"))
+check("correct tick_size produces no warning", b.tick_size_warning() is None)
+
+# POPCAT at 5 decimals with the right tick -> also silent.
+c = BybitAssembler(tick_size=0.00001)
+for i, px in enumerate([0.05737, 0.05736, 0.05738]):
+    c.on_message(trade_msg(M0 + 1000 + i * 1000, "Sell", 100, px, "MinusTick"))
+check("POPCAT 1e-05 tick accepted", c.tick_size_warning() is None)
+
 print(f"\n{'=' * 62}\n{ok} passed, {fail} failed\n{'=' * 62}")
 raise SystemExit(1 if fail else 0)

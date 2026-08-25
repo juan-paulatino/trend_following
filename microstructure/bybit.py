@@ -99,6 +99,37 @@ class BybitAssembler:
     _prev_tick_up: Optional[bool] = field(default=None, init=False)
     _dropped_blocks: int = field(default=0, init=False)
     _dropped_dupes: int = field(default=0, init=False)
+    # Smallest non-zero price increment actually observed on the tape. Used to
+    # catch a misconfigured tick_size, which silently scales every tick-based
+    # metric -- a TRXUSDT run was collected at 0.00001 when the real tick is
+    # 0.0001, inflating ticks_up/ticks_down and impact by 10x.
+    _min_increment: Optional[float] = field(default=None, init=False)
+    _last_seen_price: Optional[float] = field(default=None, init=False)
+
+    def observed_tick_size(self) -> Optional[float]:
+        return self._min_increment
+
+    def tick_size_warning(self, tol: float = 1.5) -> Optional[str]:
+        """Non-None when the configured tick_size disagrees with the tape.
+
+        Only a heuristic: the true tick is the GCD of observed increments, and
+        the smallest observed increment is an upper bound on it. So this can
+        miss a too-large configured value early in a run, but it reliably
+        catches an order-of-magnitude mistake.
+        """
+        obs = self._min_increment
+        if obs is None or self.tick_size <= 0:
+            return None
+        ratio = obs / self.tick_size
+        if ratio > tol:
+            return (f"configured tick_size={self.tick_size:g} but the smallest "
+                    f"increment seen is {obs:g} ({ratio:.0f}x larger). "
+                    f"Tick-based metrics are inflated by that factor.")
+        if ratio < 1 / tol:
+            return (f"configured tick_size={self.tick_size:g} is LARGER than the "
+                    f"smallest observed increment {obs:g}; prices move in "
+                    f"finer steps than configured.")
+        return None
 
     # ------------------------------------------------------------------
     # ingest
@@ -139,10 +170,19 @@ class BybitAssembler:
             except ValueError:
                 td = None
 
+            price = float(r["p"])
+            if self._last_seen_price is not None:
+                gap = abs(price - self._last_seen_price)
+                # guard against float noise on small prices
+                if gap > 1e-12 and (self._min_increment is None
+                                    or gap < self._min_increment):
+                    self._min_increment = gap
+            self._last_seen_price = price
+
             self._trades.append(
                 Trade(
                     ts=int(r["T"]) / 1000.0,  # ms -> seconds
-                    price=float(r["p"]),
+                    price=price,
                     size=float(r["v"]),
                     is_buy=is_buy,
                     tick_direction=td,
