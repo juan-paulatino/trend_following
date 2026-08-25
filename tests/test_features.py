@@ -341,20 +341,37 @@ print("\n14. Inferred bid depth from fills alone (no orderbook)")
 # ==========================================================================
 # A 900-unit sell is absorbed; a 1500-unit sell breaks the level.
 # => 900 < true bid depth <= 1500, proven by execution, unspoofable.
+# Coherent case: 900 absorbed, 1500 broke the level -> a real interval.
 probe = mk(
     [
-        Trade(1.0, 0.04901, 400, False, TD.MINUS),
-        Trade(10.0, 0.04901, 900, False, TD.ZERO_MINUS),
+        Trade(1.0, 0.04901, 900, False, TD.ZERO_MINUS),
         Trade(20.0, 0.04900, 1500, False, TD.MINUS),
     ],
     book=[BookSample(t, 1000, 400) for t in (5, 15, 25)],
 )
 lo, hi = probe.inferred_bid_depth
 check(f"lower bound from absorbed fill: >{lo:.0f}", lo == 900)
-check(f"upper bound from broken level: <={hi:.0f}", hi == 400)
+check(f"upper bound from broken level: <={hi:.0f}", hi == 1500)
+check("bounds are coherent, so not flagged unstable", probe.depth_unstable is False)
 check(f"wall_tested = {probe.wall_tested:.0%} of displayed bid", probe.wall_tested == 0.9)
-print("  note: upper bound comes from a DIFFERENT moment, so it is the softer")
-print("        of the two -- the lower bound is the hard one")
+
+# Inverted case, taken verbatim from the real POPCATUSDT run: a 478-unit sell
+# was absorbed while a SMALLER 153-unit sell broke the level. On live data this
+# happened in 89% of candles that reported bounds -- so it is the normal case,
+# not an anomaly, and reporting it as ">478 and <=153" was meaningless.
+flick = mk(
+    [
+        Trade(1.0, 0.05737, 478, False, TD.ZERO_MINUS),
+        Trade(20.0, 0.05736, 153, False, TD.MINUS),
+    ],
+    book=[BookSample(t, 1000, 400) for t in (5, 15, 25)],
+)
+lo2, hi2 = flick.inferred_bid_depth
+check(f"hard lower bound survives (>{lo2:.0f})", lo2 == 478)
+check("incoherent upper bound suppressed rather than printed", hi2 is None)
+check("flagged depth_unstable instead", flick.depth_unstable is True)
+print("  -> depth was FLICKERING within the minute: present for one order,")
+print("     gone for a smaller one. No single interval describes it.")
 
 # ==========================================================================
 print("\n15. Hidden liquidity: nothing displayed, price still refuses to move")

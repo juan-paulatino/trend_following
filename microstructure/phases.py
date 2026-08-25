@@ -329,6 +329,11 @@ class PhaseMachine:
             if lo > 0:
                 bound = f">{lo:.0f}" + (f" and <={hi:.0f}" if hi else "")
                 reasons.append(f"bid depth inferred from fills alone: {bound} units")
+            if c.depth_unstable:
+                reasons.append(
+                    f"depth FLICKERING: a {c.broke_min_sell:.0f}-unit sell broke the "
+                    f"level that a {c.absorbed_max_sell:.0f}-unit sell could not"
+                )
 
             # Sparse candles can still be trusted when the tick evidence is
             # unambiguous: absorption_tick_ratio is a bounded proportion.
