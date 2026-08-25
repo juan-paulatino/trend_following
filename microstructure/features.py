@@ -419,14 +419,38 @@ class Candle:
     def inferred_bid_depth(self) -> Optional[tuple]:
         """(lower, upper) bound on real bid depth, from executions alone.
 
-        Lower bound is hard: a sell of that size was absorbed without moving
-        price, so at least that much was standing there. Upper bound is softer
-        -- it comes from a different moment in the candle.
+        The lower bound is HARD: a sell of that size was absorbed without
+        moving price, so at least that much was standing there.
+
+        The upper bound is only valid if it EXCEEDS the lower bound. The two
+        observations come from different moments in the candle, and on real
+        data they invert about 90% of the time -- a 478-unit sell gets absorbed
+        while a 153-unit sell breaks the level, because depth changed in
+        between. That is not a contradiction, it just means there is no single
+        interval to report. Returns upper=None in that case; see
+        depth_unstable for the signal it carries.
         """
         if self.absorbed_max_sell <= 0 and self.broke_min_sell == float("inf"):
             return None
         upper = None if self.broke_min_sell == float("inf") else self.broke_min_sell
+        if upper is not None and upper <= self.absorbed_max_sell:
+            upper = None
         return (self.absorbed_max_sell, upper)
+
+    @property
+    def depth_unstable(self) -> bool:
+        """A smaller sell broke the level than one that was absorbed.
+
+        Depth was not merely deep or thin, it was FLICKERING within the
+        candle -- present for one order and gone for a smaller one. Common on
+        thin instruments, and it means a single depth number cannot describe
+        the minute at all.
+        """
+        return (
+            self.absorbed_max_sell > 0
+            and self.broke_min_sell != float("inf")
+            and self.broke_min_sell <= self.absorbed_max_sell
+        )
 
     @property
     def wall_tested(self) -> Optional[float]:
