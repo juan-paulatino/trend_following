@@ -595,6 +595,37 @@ class Candle:
 # Aggregator
 # --------------------------------------------------------------------------
 
+def _merge_fills(trades: Sequence[Trade]) -> List[Trade]:
+    """Collapse consecutive prints that share (ts, price, is_buy) into one.
+
+    These are fills of a single aggressive order against multiple makers at the
+    same level. Volume is summed; the tick_direction of the FIRST fill is kept,
+    because that is the one describing what the order did to the price -- the
+    trailing fills are zero-ticks by construction and carry no extra evidence.
+    """
+    if not trades:
+        return []
+    out: List[Trade] = []
+    for t in trades:
+        p = out[-1] if out else None
+        if (
+            p is not None
+            and p.ts == t.ts
+            and p.price == t.price
+            and p.is_buy == t.is_buy
+        ):
+            out[-1] = Trade(
+                ts=p.ts,
+                price=p.price,
+                size=p.size + t.size,
+                is_buy=p.is_buy,
+                tick_direction=p.tick_direction,
+            )
+        else:
+            out.append(t)
+    return out
+
+
 def build_candle(
     ts_open: float,
     ts_close: float,
@@ -615,6 +646,25 @@ def build_candle(
 
     span = max(ts_close - ts_open, EPS)
     bucket_secs = span / n_buckets
+
+    # Every path metric below -- cumulative delta, derived tick direction,
+    # quartile buckets, time centroids -- depends on trades being in TIME
+    # order. Websocket messages can arrive out of order, and a single message
+    # may carry up to 1024 trades, so arrival order is not guaranteed to match
+    # match-engine order. Sort defensively; it is cheap next to the cost of a
+    # silently corrupted path.
+    trades = sorted(trades, key=lambda t: t.ts)
+
+    # Collapse fills belonging to the SAME logical order.
+    #
+    # One market order swept across N makers resting at one price is reported
+    # as N separate prints sharing a timestamp, price and side. Counted as N
+    # trades, that single order yields 1 directional tick and N-1 zero-ticks,
+    # so absorption_tick_ratio reads ~95% when nothing was absorbed beyond one
+    # order hitting one level. Bybit's own tickDirection field has the same
+    # property, so this is not a spot-only artifact and using L would not fix
+    # it -- the defect is in treating per-fill ticks as per-order evidence.
+    trades = _merge_fills(trades)
     c = Candle(
         ts_open=ts_open,
         ts_close=ts_close,
