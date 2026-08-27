@@ -446,6 +446,56 @@ check(f"realised payoff {reward:.2f}% vs {risk:.2f}% excursion = {reward/risk:.1
       reward / risk > 10)
 
 # ==========================================================================
+print("\n16b. Fragmented fills must not manufacture absorption")
+# ==========================================================================
+# One market sell swept across 20 makers resting at one price is reported as
+# 20 prints sharing (ts, price, side). Counted per-fill it yields 1 directional
+# tick and 19 zero-ticks -> 95% "pinned" for a single order hitting a single
+# level. Bybit's own tickDirection has this property too, so using the L field
+# would not fix it.
+frag = mk(
+    [Trade(1.0, 0.3375, 500, False)]
+    + [Trade(1.0, 0.3374, 500, False) for _ in range(20)],
+    prev=0.3375,
+)
+check(f"20 fills collapsed to {frag.n_trades} logical orders", frag.n_trades == 2)
+check(f"volume preserved ({frag.volume:,.0f})", frag.volume == 10_500)
+check(f"absorption_tick_ratio = {frag.absorption_tick_ratio:.0%}, not 95%",
+      frag.absorption_tick_ratio == 0.0)
+# Genuine absorption -- separate orders, distinct timestamps -- still registers.
+genuine = mk(
+    [
+        Trade(1.0, 0.3375, 500, False),
+        Trade(15.0, 0.3374, 500, False),
+        Trade(30.0, 0.3374, 500, False),
+        Trade(45.0, 0.3374, 500, False),
+    ],
+    prev=0.3375,
+)
+check(f"real absorption still detected ({genuine.absorption_tick_ratio:.0%})",
+      genuine.absorption_tick_ratio > 0.6)
+print("  -> the metric now counts ORDERS, not fills")
+
+# ==========================================================================
+print("\n16c. Path metrics are computed in time order, not arrival order")
+# ==========================================================================
+ooo = mk(
+    [
+        Trade(50.0, 0.3374, 100, False),   # arrives first, happened LAST
+        Trade(10.0, 0.3376, 100, True),
+        Trade(30.0, 0.3375, 100, False),
+    ],
+    prev=0.3376,
+)
+check(f"open taken from the earliest trade ({ooo.open})", ooo.open == 0.3376)
+check(f"close taken from the latest ({ooo.close})", ooo.close == 0.3374)
+check(f"buy centroid {ooo.t_buy_centroid:.0f}s precedes sell centroid "
+      f"{ooo.t_sell_centroid:.0f}s", ooo.t_buy_centroid < ooo.t_sell_centroid)
+check("so flow_lag is negative (buying led)", ooo.flow_lag < 0)
+print("  -> websocket messages can arrive out of order and a single message")
+print("     may carry up to 1024 trades; arrival order is not match order")
+
+# ==========================================================================
 print("\n17. Volatility baseline survives candles that close where they opened")
 # ==========================================================================
 # On a thin sub-penny instrument many minutes close exactly at their open. A
