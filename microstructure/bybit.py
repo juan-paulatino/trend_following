@@ -104,10 +104,24 @@ class BybitAssembler:
     # metric -- a TRXUSDT run was collected at 0.00001 when the real tick is
     # 0.0001, inflating ticks_up/ticks_down and impact by 10x.
     _min_increment: Optional[float] = field(default=None, init=False)
+    _increment_hist: dict = field(default_factory=dict, init=False)
     _last_seen_price: Optional[float] = field(default=None, init=False)
 
     def observed_tick_size(self) -> Optional[float]:
-        return self._min_increment
+        """Most COMMON non-zero price increment, not the smallest.
+
+        The minimum is maximally sensitive to a single outlier. Real tapes
+        contain a few sub-tick prints -- TRXUSDT showed 5 half-tick prices out
+        of 32,361, all around 14.7 units and none flagged RPI -- and using the
+        minimum let those 5 prints fire a false tick-size warning across the
+        whole run.
+
+        The authoritative source is instruments-info priceFilter.tickSize from
+        REST; this is a fallback for when it has not been supplied.
+        """
+        if not self._increment_hist:
+            return self._min_increment
+        return max(self._increment_hist.items(), key=lambda kv: kv[1])[0]
 
     def tick_size_warning(self, tol: float = 1.5) -> Optional[str]:
         """Non-None when the configured tick_size disagrees with the tape.
@@ -117,7 +131,7 @@ class BybitAssembler:
         miss a too-large configured value early in a run, but it reliably
         catches an order-of-magnitude mistake.
         """
-        obs = self._min_increment
+        obs = self.observed_tick_size()
         if obs is None or self.tick_size <= 0:
             return None
         ratio = obs / self.tick_size
@@ -174,9 +188,13 @@ class BybitAssembler:
             if self._last_seen_price is not None:
                 gap = abs(price - self._last_seen_price)
                 # guard against float noise on small prices
-                if gap > 1e-12 and (self._min_increment is None
-                                    or gap < self._min_increment):
-                    self._min_increment = gap
+                if gap > 1e-12:
+                    if self._min_increment is None or gap < self._min_increment:
+                        self._min_increment = gap
+                    # Histogram of increments, rounded to kill float noise, so
+                    # the modal step can be used instead of the minimum.
+                    key = float(f"{gap:.10g}")
+                    self._increment_hist[key] = self._increment_hist.get(key, 0) + 1
             self._last_seen_price = price
 
             self._trades.append(
