@@ -1,0 +1,517 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Last login: Fri Aug 28 07:53:04 on console\
+jcp@Juans-iMac ~ % cd trend_following\
+jcp@Juans-iMac trend_following % caffeinate -i python3 collector.py --symbol TRXUSDT  --tick-size 0.0001  --category spot\
+\
+recording raw messages -> tape/TRXUSDT-20260828-150400.jsonl\
+subscribed to TRXUSDT (spot). Ctrl-C to stop.\
+\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[15:05] DISTRIBUTION close=0.3404       agg=0.985 (n=       796) bbo=0.349 pinned=67%\
+      - agg 0.98 buy-pressed but price failed: DISTRIBUTION\
+      - 100% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+[15:07] ABSORPTION   close=0.3404       agg=0.100 (n=     1,087) bbo=0.329 pinned=100%\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.10 sell-pressed, 988 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 100% of down-pressure ticks left price pinned (1 sells absorbed vs 0 that moved it): bid refilling at tick resolution\
+      - only 0% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >988 units\
+      - episode: 1 candles, 988 net supply absorbed for +0.00% (no vol baseline yet)\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[15:08] INVALIDATED  close=0.3404       agg=0.819 (n=     1,465) bbo=0.052 pinned=0%\
+      - bbo 0.05 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[15:09] DISTRIBUTION close=0.3403       agg=0.800 (n=     8,679) bbo=0.232 pinned=88%\
+      - agg 0.80 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+[15:10] DISTRIBUTION close=0.3403       agg=0.990 (n=     1,250) bbo=0.098 pinned=100%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[15:11] DISTRIBUTION close=0.3402       agg=0.858 (n=       928) bbo=0.266 pinned=67%\
+      - agg 0.86 buy-pressed but price failed: DISTRIBUTION\
+      - 75% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+[15:12] ABSORPTION   close=0.3403       agg=0.016 (n=     6,269) bbo=0.480 pinned=100%\
+      - agg 0.02 sell-pressed, 6118 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 100% of down-pressure ticks left price pinned (3 sells absorbed vs 0 that moved it): bid refilling at tick resolution\
+      - only 0% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >346 units\
+      - episode: 1 candles, 6118 net supply absorbed for +0.00% (no vol baseline yet)\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+[15:13] EXHAUSTION   close=0.3403       agg=0.307 (n=     2,488) bbo=0.477 pinned=40%\
+      - replenishment 0.57 < 1: depth consumed faster than refilled\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 7087 net supply absorbed for +0.00% (no vol baseline yet)\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[15:14] ARRIVAL      close=0.3403       agg=0.418 (n=     2,914) bbo=0.821 pinned=67%\
+      - buy volume x1.6 late: demand ARRIVING (numerator), delta recovered 423 off the low\
+      - buyers led the decline: demand partly spent\
+      - episode: 3 candles, 7960 net supply absorbed for +0.00% (no vol baseline yet)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[15:17] ABSORPTION   close=0.3406       agg=0.027 (n=     2,193) bbo=0.653 pinned=0%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.03 sell-pressed, 2130 net supply per 1 ticks down\
+      - bbo 0.65 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 2130 net supply absorbed for -0.03% (no vol baseline yet)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[15:18] EXHAUSTION   close=0.3406       agg= None (n=         0) bbo=0.663 pinned=  n/a  (low confidence)\
+      - zero trades with bid still posted: peak exhaustion\
+      - episode: 2 candles, 2130 net supply absorbed for -0.03% (no vol baseline yet)\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[15:19] INVALIDATED  close=0.3404       agg=0.010 (n=    45,714) bbo=0.408 pinned=87%\
+      - bbo 0.41 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[15:21] ABSORPTION   close=0.3405       agg=0.285 (n=    41,068) bbo=0.581 pinned=94%\
+      - agg 0.29 sell-pressed, 17664 net supply per 1 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 94% of down-pressure ticks left price pinned (6 sells absorbed vs 0 that moved it): bid refilling at tick resolution\
+      - only 0% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >9593 units\
+      - episode: 1 candles, 17664 net supply absorbed for -0.03% (no vol baseline yet)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[15:22] INVALIDATED  close=0.3405       agg=0.208 (n=    13,014) bbo=0.106 pinned=50%\
+      - bbo 0.11 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[15:23] ABSORPTION   close=0.3406       agg=0.094 (n=    57,282) bbo=0.242 pinned=100%\
+      - agg 0.09 sell-pressed, 48651 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 100% of down-pressure ticks left price pinned (11 sells absorbed vs 0 that moved it): bid refilling at tick resolution\
+      - only 0% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >15849 units\
+      - episode: 1 candles, 48651 net supply absorbed for +0.00% (no vol baseline yet)\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[15:24] INVALIDATED  close=0.3405       agg=0.185 (n=     1,710) bbo=0.126 pinned=33%\
+      - bbo 0.13 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+[15:25] DISTRIBUTION close=0.3406       agg=0.999 (n=   111,520) bbo=0.241 pinned=0%\
+      - agg 1.00 buy-pressed but price failed: DISTRIBUTION\
+      - 99% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+[15:26] DISTRIBUTION close=0.3406       agg=0.880 (n=     2,548) bbo=0.397 pinned=0%\
+      - agg 0.88 buy-pressed but price failed: DISTRIBUTION\
+      - 90% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[15:29] DISTRIBUTION close=0.3405       agg=0.995 (n=     6,297) bbo=0.263 pinned=0%\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      - 100% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[15:35] ABSORPTION   close=0.3407       agg=0.270 (n=     8,135) bbo=0.632 pinned=67%\
+      - agg 0.27 sell-pressed, 5679 net supply per 1 ticks down\
+      - bbo 0.63 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 67% of down-pressure ticks left price pinned (4 sells absorbed vs 2 that moved it): bid refilling at tick resolution\
+      - only 33% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 13% of displayed bid\
+      - bid depth inferred from fills alone: >3200 units\
+      - depth FLICKERING: a 70-unit sell broke the level that a 3200-unit sell could not\
+      - episode: 1 candles, 5679 net supply absorbed for -0.03% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+[15:36] INVALIDATED  close=0.3407       agg=0.739 (n=       637) bbo=0.728 pinned=0%\
+      - only 3 trades: flow metrics unreliable\
+      - 100% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[15:40] ABSORPTION   close=0.341        agg=0.097 (n=       712) bbo=0.464 pinned=80%\
+      - agg 0.10 sell-pressed, 594 net supply per 1 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 80% of down-pressure ticks left price pinned (4 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 20% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >258 units\
+      - depth FLICKERING: a 43-unit sell broke the level that a 258-unit sell could not\
+      - episode: 1 candles, 594 net supply absorbed for -0.03% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[15:41] INVALIDATED  close=0.3408       agg=0.229 (n=     5,832) bbo=0.338 pinned=85%\
+      - bbo 0.34 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[15:43] ABSORPTION   close=0.3407       agg=0.008 (n=    16,639) bbo=0.415 pinned=89%\
+      - agg 0.01 sell-pressed, 16413 net supply per 1 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 89% of down-pressure ticks left price pinned (7 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 12% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >15978 units\
+      - depth FLICKERING: a 146-unit sell broke the level that a 15978-unit sell could not\
+      - episode: 1 candles, 16413 net supply absorbed for -0.03% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[15:44] INVALIDATED  close=0.3407       agg=0.983 (n=       722) bbo=0.447 pinned=100%\
+      - bbo 0.45 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+[15:45] ABSORPTION   close=0.3407       agg=0.019 (n=    24,614) bbo=0.782 pinned=92%\
+      - agg 0.02 sell-pressed, 24164 net supply per 0 ticks down\
+      - bbo 0.78 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 92% of down-pressure ticks left price pinned (11 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 8% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 7% of displayed bid\
+      - bid depth inferred from fills alone: >1837 and <=17662 units\
+      - episode: 1 candles, 24164 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[15:52] ABSORPTION   close=0.3403       agg=0.007 (n=    16,918) bbo=0.429 pinned=80%\
+      - agg 0.01 sell-pressed, 16715 net supply per 2 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 80% of down-pressure ticks left price pinned (7 sells absorbed vs 2 that moved it): bid refilling at tick resolution\
+      - only 22% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >13518 units\
+      - depth FLICKERING: a 33-unit sell broke the level that a 13518-unit sell could not\
+      - episode: 1 candles, 16715 net supply absorbed for -0.06% (-2.00 vol-normalised)\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+[15:53] EXHAUSTION   close=0.3402       agg=0.087 (n=     2,207) bbo=0.581 pinned=78%\
+      - replenishment 0.07 < 1: depth consumed faster than refilled\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 18557 net supply absorbed for -0.09% (-2.12 vol-normalised)\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+[15:54] ARRIVAL      close=0.3403       agg=0.849 (n=    57,135) bbo=0.671 pinned=50%\
+      - buy volume xinf late: demand ARRIVING (numerator), delta recovered 39957 off the low\
+      - selling trough preceded buying peak: demand unspent\
+      - episode: 3 candles, 18657 net supply absorbed for -0.09% (-1.73 vol-normalised)\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+[16:00] ABSORPTION   close=0.34         agg=0.098 (n=    25,138) bbo=0.767 pinned=60%\
+      - agg 0.10 sell-pressed, 20235 net supply per 2 ticks down\
+      - bbo 0.77 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 18% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 13% of displayed bid\
+      - bid depth inferred from fills alone: >2814 units\
+      - depth FLICKERING: a 21-unit sell broke the level that a 2814-unit sell could not\
+      - episode: 1 candles, 20235 net supply absorbed for -0.06% (-2.00 vol-normalised)\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[16:01] ARRIVAL      close=0.3399       agg=0.029 (n=     7,531) bbo=0.498 pinned=50%\
+      - replenishment 0.26 < 1: depth consumed faster than refilled\
+      - buy volume xinf late: demand ARRIVING (numerator), delta recovered 0 off the low\
+      - buyers led the decline: demand partly spent\
+      - episode: 2 candles, 27347 net supply absorbed for -0.06% (-1.41 vol-normalised)\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:06] ABSORPTION   close=0.3396       agg=0.097 (n=    11,905) bbo=0.624 pinned=77%\
+      - agg 0.10 sell-pressed, 9618 net supply per 1 ticks down\
+      - bbo 0.62 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 77% of down-pressure ticks left price pinned (9 sells absorbed vs 3 that moved it): bid refilling at tick resolution\
+      - only 23% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 18% of displayed bid\
+      - bid depth inferred from fills alone: >3080 units\
+      - depth FLICKERING: a 37-unit sell broke the level that a 3080-unit sell could not\
+      - episode: 1 candles, 9618 net supply absorbed for -0.03% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:07] INVALIDATED  close=0.3396       agg=0.432 (n=       235) bbo=0.419 pinned=75%\
+      - bbo 0.42 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[16:09] ABSORPTION   close=0.3395       agg=0.019 (n=    22,314) bbo=0.724 pinned=89%\
+      - agg 0.02 sell-pressed, 21495 net supply per 1 ticks down\
+      - bbo 0.72 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 89% of down-pressure ticks left price pinned (14 sells absorbed vs 2 that moved it): bid refilling at tick resolution\
+      - only 12% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 52% of displayed bid\
+      - bid depth inferred from fills alone: >10836 units\
+      - depth FLICKERING: a 225-unit sell broke the level that a 10836-unit sell could not\
+      - episode: 1 candles, 21495 net supply absorbed for -0.03% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+[16:10] EXHAUSTION   close=0.3395       agg=0.768 (n=    10,361) bbo=0.776 pinned=50%\
+      - replenishment 0.15 < 1: depth consumed faster than refilled\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 21495 net supply absorbed for -0.03% (-0.71 vol-normalised)\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+[16:11] EXHAUSTION   close=0.3396       agg=0.454 (n=     3,037) bbo=0.821 pinned=100%\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 3 candles, 21495 net supply absorbed for -0.03% (-0.58 vol-normalised)\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[16:12] INVALIDATED  close=0.3395       agg=0.477 (n=       659) bbo=0.290 pinned=67%\
+      - only 3 trades: flow metrics unreliable\
+      - bbo 0.29 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[16:16] ABSORPTION   close=0.3393       agg=0.021 (n=     3,454) bbo=0.728 pinned=82%\
+      - agg 0.02 sell-pressed, 3393 net supply per 0 ticks down\
+      - bbo 0.73 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 82% of down-pressure ticks left price pinned (9 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 10% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 13% of displayed bid\
+      - bid depth inferred from fills alone: >3050 units\
+      - depth FLICKERING: a 11-unit sell broke the level that a 3050-unit sell could not\
+      - episode: 1 candles, 3393 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+[16:17] EXHAUSTION   close=0.3392       agg=0.196 (n=     3,388) bbo=0.540 pinned=80%\
+      - replenishment 0.09 < 1: depth consumed faster than refilled\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 5724 net supply absorbed for -0.06% (-1.41 vol-normalised)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:18] VACUUM       close=0.3393       agg=0.130 (n=       646) bbo=0.707 pinned=0%  (low confidence)\
+      - only 4 trades: flow metrics unreliable\
+      - price up on thin participation, impact asymmetry 7.6x: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[16:19] ABSORPTION   close=0.3395       agg=0.027 (n=     2,930) bbo=0.856 pinned=67%\
+      - agg 0.03 sell-pressed, 2833 net supply per 0 ticks down\
+      - bbo 0.86 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 67% of down-pressure ticks left price pinned (2 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 25% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 4.9% of displayed bid -- the wall was never tested\
+      - bid depth inferred from fills alone: >1303 units\
+      - depth FLICKERING: a 141-unit sell broke the level that a 1303-unit sell could not\
+      - episode: 1 candles, 2833 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+[16:21] DISTRIBUTION close=0.3397       agg=0.975 (n=       471) bbo=0.294 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.97 buy-pressed but price failed: DISTRIBUTION\
+      - 100% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:22] ABSORPTION   close=0.3396       agg=0.016 (n=       772) bbo=0.242 pinned=67%\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.02 sell-pressed, 772 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 67% of down-pressure ticks left price pinned (2 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 33% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >391 units\
+      - depth FLICKERING: a 238-unit sell broke the level that a 391-unit sell could not\
+      - episode: 1 candles, 772 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[16:23] ABSORPTION   close=0.339        agg=0.005 (n=    14,233) bbo=0.486 pinned=77%\
+      - replenishment 0.52 < 1: depth consumed faster than refilled\
+      - agg 0.00 sell-pressed, 14126 net supply per 5 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 77% of down-pressure ticks left price pinned (23 sells absorbed vs 7 that moved it): bid refilling at tick resolution\
+      - only 23% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >2843 units\
+      - depth FLICKERING: a 42-unit sell broke the level that a 2843-unit sell could not\
+      - episode: 2 candles, 14899 net supply absorbed for -0.18% (-4.24 vol-normalised)\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+[16:24] ARRIVAL      close=0.3389       agg=0.839 (n=    32,400) bbo=0.541 pinned=83%\
+      - replenishment 0.15 < 1: depth consumed faster than refilled\
+      - buy volume xinf late: demand ARRIVING (numerator), delta recovered 26845 off the low\
+      - selling trough preceded buying peak: demand unspent\
+      - episode: 3 candles, 19781 net supply absorbed for -0.27% (-5.19 vol-normalised)\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+[16:25] VACUUM       close=0.3391       agg=0.494 (n=    20,809) bbo=0.632 pinned=95%  (low confidence)\
+      - price up on thin participation, impact asymmetry 2.0x: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[16:28] VACUUM       close=0.339        agg=0.303 (n=     1,205) bbo=0.752 pinned=67%  (low confidence)\
+      - price up on thin participation: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:34] VACUUM       close=0.339        agg=0.958 (n=       671) bbo=0.782 pinned=0%  (low confidence)\
+      - only 4 trades: flow metrics unreliable\
+      - price up on thin participation: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+[16:36] ABSORPTION   close=0.3391       agg=0.103 (n=     3,920) bbo=0.788 pinned=50%\
+      - agg 0.10 sell-pressed, 3424 net supply per 0 ticks down\
+      - bbo 0.79 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 25% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.5% of displayed bid -- the wall was never tested\
+      - bid depth inferred from fills alone: >114 and <=399 units\
+      - episode: 1 candles, 3424 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:37] INVALIDATED  close=0.3391       agg=0.155 (n=     2,412) bbo=0.622 pinned=33%\
+      - 67% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:40] VACUUM       close=0.3393       agg=0.551 (n=       631) bbo=0.317 pinned=100%  (low confidence)\
+      - price up on thin participation: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:42] ABSORPTION   close=0.3392       agg=0.171 (n=    24,066) bbo=0.608 pinned=89%\
+      - agg 0.17 sell-pressed, 18080 net supply per 2 ticks down\
+      - bbo 0.61 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 89% of down-pressure ticks left price pinned (14 sells absorbed vs 2 that moved it): bid refilling at tick resolution\
+      - only 11% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 28% of displayed bid\
+      - bid depth inferred from fills alone: >2962 units\
+      - depth FLICKERING: a 2285-unit sell broke the level that a 2962-unit sell could not\
+      - episode: 1 candles, 18080 net supply absorbed for -0.06% (-2.00 vol-normalised)\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+[16:43] INVALIDATED  close=0.3391       agg=0.481 (n=     5,632) bbo=0.396 pinned=50%\
+      - bbo 0.40 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:44] DISTRIBUTION close=0.3391       agg=0.946 (n=       573) bbo=0.222 pinned=67%  (low confidence)\
+      - only 4 trades: flow metrics unreliable\
+      - agg 0.95 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[16:49] ABSORPTION   close=0.3391       agg=0.137 (n=     7,368) bbo=0.914 pinned=80%\
+      - agg 0.14 sell-pressed, 5362 net supply per 1 ticks down\
+      - bbo 0.91 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 80% of down-pressure ticks left price pinned (4 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 20% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 8% of displayed bid\
+      - bid depth inferred from fills alone: >2467 units\
+      - depth FLICKERING: a 2098-unit sell broke the level that a 2467-unit sell could not\
+      - episode: 1 candles, 5362 net supply absorbed for -0.03% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[16:50] INVALIDATED  close=0.3391       agg=0.137 (n=       917) bbo=0.301 pinned=80%\
+      - bbo 0.30 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+[16:51] DISTRIBUTION close=0.339        agg=0.751 (n=       241) bbo=0.248 pinned=67%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.75 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[16:53] DISTRIBUTION close=0.3392       agg=0.982 (n=       667) bbo=0.294 pinned=  n/a  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.98 buy-pressed but price failed: DISTRIBUTION\
+      - 100% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[16:54] DISTRIBUTION close=0.3391       agg=0.871 (n=       583) bbo=0.238 pinned=50%\
+      - agg 0.87 buy-pressed but price failed: DISTRIBUTION\
+      - 100% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[16:55] VACUUM       close=0.3393       agg=0.993 (n=     1,862) bbo=0.410 pinned=  n/a  (low confidence)\
+      - price up on thin participation: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[17:00] ABSORPTION   close=0.339        agg=0.171 (n=     5,993) bbo=0.189 pinned=69%\
+      - agg 0.17 sell-pressed, 3962 net supply per 3 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 69% of down-pressure ticks left price pinned (8 sells absorbed vs 4 that moved it): bid refilling at tick resolution\
+      - only 33% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >2612 units\
+      - depth FLICKERING: a 36-unit sell broke the level that a 2612-unit sell could not\
+      - episode: 1 candles, 3962 net supply absorbed for -0.09% (-3.00 vol-normalised)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[17:01] INVALIDATED  close=0.3392       agg=0.994 (n=     2,111) bbo=0.271 pinned=  n/a\
+      - only 3 trades: flow metrics unreliable\
+      - bbo 0.27 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[17:02] DISTRIBUTION close=0.3392       agg=0.936 (n=       170) bbo=0.354 pinned=  n/a  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.94 buy-pressed but price failed: DISTRIBUTION\
+      - 100% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+[17:03] ABSORPTION   close=0.3393       agg=0.158 (n=     5,012) bbo=0.696 pinned=75%\
+      - agg 0.16 sell-pressed, 4189 net supply per 0 ticks down\
+      - bbo 0.70 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 75% of down-pressure ticks left price pinned (1 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 33% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.2% of displayed bid -- the wall was never tested\
+      - bid depth inferred from fills alone: >44 and <=4181 units\
+      - episode: 1 candles, 4189 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[17:04] EXHAUSTION   close=0.3393       agg=0.746 (n=       936) bbo=0.676 pinned=67%\
+      - replenishment 0.01 < 1: depth consumed faster than refilled\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 4189 net supply absorbed for -0.03% (-0.71 vol-normalised)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[17:05] INVALIDATED  close=0.3391       agg=0.228 (n=     2,187) bbo=0.506 pinned=33%\
+      - 100% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+[17:08] ABSORPTION   close=0.3394       agg=0.095 (n=     1,197) bbo=0.409 pinned=100%\
+      - agg 0.09 sell-pressed, 1094 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 100% of down-pressure ticks left price pinned (2 sells absorbed vs 0 that moved it): bid refilling at tick resolution\
+      - only 0% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >1062 units\
+      - episode: 1 candles, 1094 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[17:09] INVALIDATED  close=0.3393       agg=0.538 (n=    88,156) bbo=0.164 pinned=74%\
+      - bbo 0.16 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+[17:11] ABSORPTION   close=0.3391       agg=0.249 (n=        70) bbo=0.469 pinned=100%\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.25 sell-pressed, 59 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 100% of down-pressure ticks left price pinned (1 sells absorbed vs 0 that moved it): bid refilling at tick resolution\
+      - only 0% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >59 units\
+      - episode: 1 candles, 59 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[17:12] ARRIVAL      close=0.3391       agg=0.995 (n=     2,651) bbo=0.735 pinned=100%\
+      - buy volume x9.1 late: demand ARRIVING (numerator), delta recovered 2651 off the low\
+      - buyers led the decline: demand partly spent\
+      - episode: 2 candles, 59 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[17:17] VACUUM       close=0.3393       agg=0.338 (n=       277) bbo=0.918 pinned=0%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - price up on thin participation: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+[17:21] DISTRIBUTION close=0.3396       agg=0.957 (n=     4,842) bbo=0.201 pinned=0%\
+      - agg 0.96 buy-pressed but price failed: DISTRIBUTION\
+      - 67% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[17:22] ABSORPTION   close=0.3396       agg=0.020 (n=       588) bbo=0.343 pinned=100%\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.02 sell-pressed, 588 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 100% of down-pressure ticks left price pinned (1 sells absorbed vs 0 that moved it): bid refilling at tick resolution\
+      - only 0% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >588 units\
+      - episode: 1 candles, 588 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[17:23] INVALIDATED  close=0.3397       agg=0.970 (n=       397) bbo=0.148 pinned=  n/a\
+      - only 2 trades: flow metrics unreliable\
+      - bbo 0.15 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[17:24] VACUUM       close=0.3397       agg=0.896 (n=       499) bbo=0.146 pinned=0%  (low confidence)\
+      - price up on thin participation: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+\
+}
