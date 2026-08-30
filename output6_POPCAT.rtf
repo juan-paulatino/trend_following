@@ -1,0 +1,1955 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Last login: Fri Aug 28 21:09:38 on console\
+jcp@Juans-iMac ~ % cd trend_following\
+jcp@Juans-iMac trend_following % caffeinate -i python3 collector.py --symbol POPCATUSDT --tick-size 0.00001 --category spot\
+\
+recording raw messages -> tape/POPCATUSDT-20260829-042200.jsonl\
+subscribed to POPCATUSDT (spot). Ctrl-C to stop.\
+\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[04:24] ABSORPTION   close=0.05494      agg=0.003 (n=     3,624) bbo=0.799 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.00 sell-pressed, 3624 net supply per 0 ticks down\
+      - bbo 0.80 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 3624 net supply absorbed for +0.00% (no vol baseline yet)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+[04:43] ABSORPTION   close=0.05481      agg=0.003 (n=     3,590) bbo=0.625 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.00 sell-pressed, 3590 net supply per 0 ticks down\
+      - bbo 0.62 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 3590 net supply absorbed for +0.00% (no vol baseline yet)\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[04:47] ABSORPTION   close=0.0549       agg=0.206 (n=    84,229) bbo=0.733 pinned=67%\
+      - agg 0.21 sell-pressed, 56286 net supply per 11 ticks down\
+      - bbo 0.73 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 67% of down-pressure ticks left price pinned (15 sells absorbed vs 8 that moved it): bid refilling at tick resolution\
+      - only 32% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 80% of displayed bid\
+      - bid depth inferred from fills alone: >3412 units\
+      - depth FLICKERING: a 223-unit sell broke the level that a 3412-unit sell could not\
+      - episode: 1 candles, 56286 net supply absorbed for -0.20% (no vol baseline yet)\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[04:59] ABSORPTION   close=0.05517      agg=0.007 (n=     1,810) bbo=0.622 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1810 net supply per 0 ticks down\
+      - bbo 0.62 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 74% of displayed bid\
+      - bid depth inferred from fills alone: >772 and <=1038 units\
+      - episode: 1 candles, 1810 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[05:05] ABSORPTION   close=0.05521      agg=0.003 (n=     3,702) bbo=0.719 pinned=100%\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.00 sell-pressed, 3702 net supply per 0 ticks down\
+      - bbo 0.72 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 100% of down-pressure ticks left price pinned (1 sells absorbed vs 0 that moved it): bid refilling at tick resolution\
+      - only 0% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 127% of displayed bid\
+      - bid depth inferred from fills alone: >1820 units\
+      - episode: 1 candles, 3702 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[05:06] EXHAUSTION   close=0.0552       agg=0.003 (n=     3,678) bbo=0.531 pinned=33%  (low confidence)\
+      - only 4 trades: flow metrics unreliable\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 7380 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[05:15] ABSORPTION   close=0.05526      agg=0.002 (n=     5,366) bbo=0.681 pinned=0%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.00 sell-pressed, 5366 net supply per 1 ticks down\
+      - bbo 0.68 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 33% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 5366 net supply absorbed for -0.02% (-0.99 vol-normalised)\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[05:16] INVALIDATED  close=0.05527      agg=0.087 (n=     1,968) bbo=0.616 pinned=0%\
+      - only 2 trades: flow metrics unreliable\
+      - 100% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[05:19] ABSORPTION   close=0.05528      agg=0.007 (n=     1,725) bbo=0.795 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1725 net supply per 0 ticks down\
+      - bbo 0.80 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 1725 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[05:20] EXHAUSTION   close=0.05529      agg=0.001 (n=    10,592) bbo=0.535 pinned=80%\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 12317 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[05:21] INVALIDATED  close=0.05529      agg=0.933 (n=       162) bbo=0.413 pinned=100%\
+      - only 1 trades: flow metrics unreliable\
+      - bbo 0.41 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[05:49] ABSORPTION   close=0.0552       agg=0.007 (n=     1,865) bbo=0.770 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1865 net supply per 0 ticks down\
+      - bbo 0.77 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 1865 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+[05:52] ABSORPTION   close=0.05522      agg=0.007 (n=     1,792) bbo=0.683 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1792 net supply per 0 ticks down\
+      - bbo 0.68 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 25% of displayed bid\
+      - bid depth inferred from fills alone: >327 and <=1465 units\
+      - episode: 1 candles, 1792 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[05:53] EXHAUSTION   close=0.05521      agg=0.002 (n=     5,163) bbo=0.538 pinned=33%\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 6956 net supply absorbed for -0.09% (-3.53 vol-normalised)\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[06:17] ABSORPTION   close=0.05478      agg=0.025 (n=       467) bbo=0.614 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.03 sell-pressed, 467 net supply per 0 ticks down\
+      - bbo 0.61 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 467 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[06:18] EXHAUSTION   close=0.05478      agg= None (n=         0) bbo=0.770 pinned=  n/a  (low confidence)\
+      - zero trades with bid still posted: peak exhaustion\
+      - episode: 2 candles, 467 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[06:19] INVALIDATED  close=0.05476      agg=0.005 (n=     2,481) bbo=0.687 pinned=0%\
+      - only 1 trades: flow metrics unreliable\
+      - 100% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+[06:27] ABSORPTION   close=0.05422      agg=0.190 (n=   169,275) bbo=0.792 pinned=65%\
+      - agg 0.19 sell-pressed, 104871 net supply per 12 ticks down\
+      - bbo 0.79 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 65% of down-pressure ticks left price pinned (11 sells absorbed vs 5 that moved it): bid refilling at tick resolution\
+      - only 15% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 107% of displayed bid\
+      - bid depth inferred from fills alone: >4098 units\
+      - depth FLICKERING: a 143-unit sell broke the level that a 4098-unit sell could not\
+      - episode: 1 candles, 104871 net supply absorbed for -0.22% (-6.15 vol-normalised)\
+[06:28] EXHAUSTION   close=0.05422      agg= None (n=         0) bbo=0.697 pinned=  n/a  (low confidence)\
+      - zero trades with bid still posted: peak exhaustion\
+      - episode: 2 candles, 104871 net supply absorbed for -0.22% (-4.35 vol-normalised)\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[06:29] EXHAUSTION   close=0.05422      agg= None (n=         0) bbo=0.679 pinned=  n/a  (low confidence)\
+      - zero trades with bid still posted: peak exhaustion\
+      - episode: 3 candles, 104871 net supply absorbed for -0.22% (-3.55 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[06:30] INVALIDATED  close=0.05429      agg=0.033 (n=       349) bbo=0.437 pinned=  n/a\
+      - only 1 trades: flow metrics unreliable\
+      - bbo 0.44 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[06:35] DISTRIBUTION close=0.05419      agg=0.997 (n=     4,901) bbo=0.337 pinned=67%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 1.00 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+[06:54] ABSORPTION   close=0.0542       agg=0.008 (n=     1,469) bbo=0.571 pinned=83%\
+      - agg 0.01 sell-pressed, 1469 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 83% of down-pressure ticks left price pinned (5 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 14% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >467 units\
+      - depth FLICKERING: a 107-unit sell broke the level that a 467-unit sell could not\
+      - episode: 1 candles, 1469 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[06:55] INVALIDATED  close=0.05419      agg=0.458 (n=     1,742) bbo=0.462 pinned=50%\
+      - 67% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[07:03] DISTRIBUTION close=0.05418      agg=0.996 (n=     3,366) bbo=0.394 pinned=  n/a  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 1.00 buy-pressed but price failed: DISTRIBUTION\
+      - 67% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+[07:30] ABSORPTION   close=0.054        agg=0.002 (n=     5,575) bbo=0.459 pinned=62%\
+      - agg 0.00 sell-pressed, 5575 net supply per 2 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 62% of down-pressure ticks left price pinned (5 sells absorbed vs 3 that moved it): bid refilling at tick resolution\
+      - bid depth inferred from fills alone: >3412 units\
+      - depth FLICKERING: a 219-unit sell broke the level that a 3412-unit sell could not\
+      - episode: 1 candles, 5575 net supply absorbed for -0.04% (-2.00 vol-normalised)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[07:31] ABSORPTION   close=0.05406      agg=0.017 (n=       705) bbo=0.624 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - replenishment 0.19 < 1: depth consumed faster than refilled\
+      - agg 0.02 sell-pressed, 705 net supply per 0 ticks down\
+      - bbo 0.62 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 2 candles, 6280 net supply absorbed for -0.04% (-1.42 vol-normalised)\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+[07:35] DISTRIBUTION close=0.05417      agg=0.946 (n=       206) bbo=0.399 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.95 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[07:55] DISTRIBUTION close=0.05406      agg=0.993 (n=     1,717) bbo=0.269 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      - 100% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[07:57] DISTRIBUTION close=0.05401      agg=0.998 (n=     6,874) bbo=0.233 pinned=67%\
+      - agg 1.00 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+[08:02] ABSORPTION   close=0.05395      agg=0.033 (n=       357) bbo=0.613 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.03 sell-pressed, 357 net supply per 0 ticks down\
+      - bbo 0.61 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 357 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[08:03] INVALIDATED  close=0.05387      agg=0.025 (n=       467) bbo=0.382 pinned=0%\
+      - only 1 trades: flow metrics unreliable\
+      - bbo 0.38 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[08:10] DISTRIBUTION close=0.05386      agg=0.974 (n=       460) bbo=0.284 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.97 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[08:11] DISTRIBUTION close=0.05385      agg=0.993 (n=     1,807) bbo=0.326 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[08:18] DISTRIBUTION close=0.05381      agg=0.993 (n=     1,839) bbo=0.372 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[08:21] ABSORPTION   close=0.05392      agg=0.003 (n=     3,773) bbo=0.771 pinned=50%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.00 sell-pressed, 3773 net supply per 1 ticks down\
+      - bbo 0.77 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 33% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 56% of displayed bid\
+      - bid depth inferred from fills alone: >983 units\
+      - depth FLICKERING: a 935-unit sell broke the level that a 983-unit sell could not\
+      - episode: 1 candles, 3773 net supply absorbed for -0.02% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+[08:22] ARRIVAL      close=0.05411      agg=0.508 (n=    10,341) bbo=0.520 pinned=33%\
+      - buy volume xinf late: demand ARRIVING (numerator), delta recovered 171 off the low\
+      - buyers led the decline: demand partly spent\
+      - episode: 2 candles, 3773 net supply absorbed for -0.02% (-0.71 vol-normalised)\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[08:27] ABSORPTION   close=0.05465      agg=0.016 (n=       766) bbo=0.749 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.02 sell-pressed, 766 net supply per 0 ticks down\
+      - bbo 0.75 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 766 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[08:28] EXHAUSTION   close=0.05465      agg= None (n=         0) bbo=0.697 pinned=  n/a  (low confidence)\
+      - zero trades with bid still posted: peak exhaustion\
+      - episode: 2 candles, 766 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[08:29] EXHAUSTION   close=0.05465      agg= None (n=         0) bbo=0.887 pinned=  n/a  (low confidence)\
+      - zero trades with bid still posted: peak exhaustion\
+      - episode: 3 candles, 766 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[08:30] ABSORPTION   close=0.05478      agg=0.005 (n=     2,472) bbo=0.781 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 2472 net supply per 0 ticks down\
+      - bbo 0.78 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 2472 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[08:31] ABSORPTION   close=0.05479      agg=0.037 (n=     4,916) bbo=0.790 pinned=0%\
+      - agg 0.04 sell-pressed, 4577 net supply per 4 ticks down\
+      - bbo 0.79 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 17% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 2 candles, 7050 net supply absorbed for -0.02% (-0.70 vol-normalised)\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[08:32] ABSORPTION   close=0.05482      agg=0.001 (n=     8,632) bbo=0.807 pinned=75%\
+      - agg 0.00 sell-pressed, 8632 net supply per 0 ticks down\
+      - bbo 0.81 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 75% of down-pressure ticks left price pinned (3 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 17% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 123% of displayed bid\
+      - bid depth inferred from fills alone: >1787 units\
+      - depth FLICKERING: a 1461-unit sell broke the level that a 1787-unit sell could not\
+      - episode: 3 candles, 15682 net supply absorbed for -0.02% (-0.57 vol-normalised)\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[08:33] INVALIDATED  close=0.05472      agg=0.001 (n=     9,221) bbo=0.556 pinned=0%\
+      - 67% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[08:44] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[09:16] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+[09:28] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[09:51] ABSORPTION   close=0.05458      agg=0.013 (n=       935) bbo=0.631 pinned=0%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 935 net supply per 1 ticks down\
+      - bbo 0.63 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 935 net supply absorbed for -0.02% (-0.99 vol-normalised)\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[10:01] DISTRIBUTION close=0.05445      agg=0.993 (n=     1,828) bbo=0.343 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[10:08] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+[10:09] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[10:10] DISTRIBUTION close=0.05418      agg=0.794 (n=     2,307) bbo=0.319 pinned=80%\
+      - agg 0.79 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[10:11] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[10:20] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[10:23] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+[10:26] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[10:28] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+[10:29] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[10:39] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[10:40] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+[10:41] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+[10:42] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+[10:43] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+[10:44] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[10:54] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[10:58] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[11:03] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[11:12] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[11:19] ABSORPTION   close=0.05424      agg=0.006 (n=     1,906) bbo=0.741 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1906 net supply per 0 ticks down\
+      - bbo 0.74 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 1906 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[11:21] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[11:39] DISTRIBUTION close=0.05424      agg=0.988 (n=     1,000) bbo=0.316 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      - 100% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[11:44] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[11:54] ABSORPTION   close=0.05429      agg=0.002 (n=     5,613) bbo=0.611 pinned=0%  (low confidence)\
+      - only 4 trades: flow metrics unreliable\
+      - agg 0.00 sell-pressed, 5613 net supply per 5 ticks down\
+      - bbo 0.61 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 5613 net supply absorbed for -0.09% (-4.99 vol-normalised)\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[11:55] INVALIDATED  close=0.05425      agg=0.009 (n=     1,377) bbo=0.672 pinned=0%\
+      - only 1 trades: flow metrics unreliable\
+      - 100% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[12:00] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[12:10] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[12:36] DISTRIBUTION close=0.05425      agg=0.977 (n=       530) bbo=0.237 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.98 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[12:46] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+[12:59] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[13:05] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+[13:13] DISTRIBUTION close=0.05413      agg=0.990 (n=     1,232) bbo=0.331 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[13:14] DISTRIBUTION close=0.05416      agg=0.993 (n=     1,642) bbo=0.345 pinned=  n/a  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      - 67% of up-pressure ticks pinned: ask refilling, supply capping\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+[13:24] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 22 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[13:34] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+[13:43] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[13:46] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[13:49] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[13:51] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[13:56] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[14:19] ABSORPTION   close=0.05445      agg=0.013 (n=       957) bbo=0.502 pinned=67%\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 957 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 67% of down-pressure ticks left price pinned (2 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 33% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >435 and <=467 units\
+      - episode: 1 candles, 957 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[14:43] ABSORPTION   close=0.05475      agg=0.247 (n=     4,118) bbo=0.646 pinned=14%\
+      - agg 0.25 sell-pressed, 2094 net supply per 7 ticks down\
+      - bbo 0.65 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 35% of displayed bid\
+      - bid depth inferred from fills alone: >227 and <=315 units\
+      - episode: 1 candles, 2094 net supply absorbed for -0.13% (-6.97 vol-normalised)\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[14:50] ABSORPTION   close=0.05511      agg=0.024 (n=       500) bbo=0.685 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.02 sell-pressed, 500 net supply per 0 ticks down\
+      - bbo 0.69 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 500 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[14:51] ARRIVAL      close=0.05498      agg=0.414 (n=     1,134) bbo=0.466 pinned=40%\
+      - replenishment 0.65 < 1: depth consumed faster than refilled\
+      - buy volume xinf late: demand ARRIVING (numerator), delta recovered 467 off the low\
+      - selling trough preceded buying peak: demand unspent\
+      - episode: 2 candles, 1166 net supply absorbed for -0.24% (-9.10 vol-normalised)\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[15:04] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[15:15] DISTRIBUTION close=0.05484      agg=0.993 (n=     1,671) bbo=0.329 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[15:45] ABSORPTION   close=0.05452      agg=0.047 (n=    10,205) bbo=0.603 pinned=33%\
+      - agg 0.05 sell-pressed, 9271 net supply per 3 ticks down\
+      - bbo 0.60 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 321% of displayed bid\
+      - bid depth inferred from fills alone: >3412 units\
+      - depth FLICKERING: a 280-unit sell broke the level that a 3412-unit sell could not\
+      - episode: 1 candles, 9271 net supply absorbed for -0.05% (-3.00 vol-normalised)\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[15:46] EXHAUSTION   close=0.05452      agg= None (n=         0) bbo=0.551 pinned=  n/a  (low confidence)\
+      - zero trades with bid still posted: peak exhaustion\
+      - episode: 2 candles, 9271 net supply absorbed for -0.05% (-2.12 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[15:47] ARRIVAL      close=0.05465      agg=0.940 (n=       183) bbo=0.557 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - buy volume xinf late: demand ARRIVING (numerator), delta recovered 183 off the low\
+      - buyers led the decline: demand partly spent\
+      - episode: 3 candles, 9271 net supply absorbed for -0.05% (-1.73 vol-normalised)\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[16:16] VACUUM       close=0.05493      agg=0.609 (n=     4,784) bbo=0.527 pinned=0%  (low confidence)\
+      - price up on thin participation, impact asymmetry 5.8x: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+[16:39] ABSORPTION   close=0.0548       agg=0.013 (n=       916) bbo=0.614 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 916 net supply per 0 ticks down\
+      - bbo 0.61 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 42% of displayed bid\
+      - bid depth inferred from fills alone: >458 units\
+      - depth FLICKERING: a 458-unit sell broke the level that a 458-unit sell could not\
+      - episode: 1 candles, 916 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[16:47] DISTRIBUTION close=0.05472      agg=0.985 (n=       796) bbo=0.368 pinned=67%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.98 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[17:03] VACUUM       close=0.05452      agg=0.690 (n=     3,262) bbo=0.561 pinned=40%  (low confidence)\
+      - price up on thin participation, impact asymmetry 4.9x: VACUUM drift, no inventory transfer\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[17:26] DISTRIBUTION close=0.05427      agg=0.981 (n=       636) bbo=0.225 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.98 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[17:29] DISTRIBUTION close=0.05418      agg=0.975 (n=       467) bbo=0.302 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.97 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[18:26] DISTRIBUTION close=0.05424      agg=0.873 (n=        73) bbo=0.181 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.87 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[18:27] DISTRIBUTION close=0.05423      agg=0.993 (n=     1,777) bbo=0.237 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[18:54] DISTRIBUTION close=0.05428      agg=0.993 (n=     1,789) bbo=0.354 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[18:56] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[18:57] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[19:01] ABSORPTION   close=0.05427      agg=0.011 (n=     1,165) bbo=0.311 pinned=67%\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1165 net supply per 1 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 67% of down-pressure ticks left price pinned (2 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 33% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >467 units\
+      - depth FLICKERING: a 230-unit sell broke the level that a 467-unit sell could not\
+      - episode: 1 candles, 1165 net supply absorbed for -0.02% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[19:02] INVALIDATED  close=0.05424      agg=0.005 (n=     2,416) bbo=0.365 pinned=67%\
+      - bbo 0.37 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[19:33] DISTRIBUTION close=0.05444      agg=0.996 (n=     3,230) bbo=0.361 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 1.00 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[19:39] DISTRIBUTION close=0.05441      agg=0.993 (n=     1,819) bbo=0.250 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[19:45] ABSORPTION   close=0.05445      agg=0.009 (n=     1,393) bbo=0.303 pinned=67%\
+      - only 4 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1393 net supply per 1 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 67% of down-pressure ticks left price pinned (2 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 25% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >467 units\
+      - depth FLICKERING: a 229-unit sell broke the level that a 467-unit sell could not\
+      - episode: 1 candles, 1393 net supply absorbed for -0.02% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[19:57] DISTRIBUTION close=0.05428      agg=0.992 (n=     1,548) bbo=0.348 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[19:58] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+[19:59] DISTRIBUTION close=0.05428      agg=0.992 (n=     1,474) bbo=0.350 pinned=100%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[20:06] DISTRIBUTION close=0.05441      agg=0.988 (n=     1,008) bbo=0.392 pinned=67%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+[20:18] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+[20:27] DISTRIBUTION close=0.05431      agg=0.990 (n=     1,174) bbo=0.215 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[20:30] DISTRIBUTION close=0.05429      agg=0.703 (n=     2,397) bbo=0.335 pinned=0%\
+      - agg 0.70 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[20:33] DISTRIBUTION close=0.05423      agg=0.996 (n=     3,253) bbo=0.350 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 1.00 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[20:35] DISTRIBUTION close=0.05431      agg=0.991 (n=     1,402) bbo=0.349 pinned=50%\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[20:38] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[20:40] DISTRIBUTION close=0.05426      agg=0.993 (n=     1,827) bbo=0.321 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[20:42] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[20:49] DISTRIBUTION close=0.05424      agg=0.993 (n=     1,769) bbo=0.320 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[20:50] DISTRIBUTION close=0.05423      agg=0.993 (n=     1,795) bbo=0.381 pinned=50%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.99 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[20:52] ABSORPTION   close=0.05421      agg=0.007 (n=     1,868) bbo=0.368 pinned=75%\
+      - only 4 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1868 net supply per 0 ticks down\
+      - HIDDEN liquidity: price pinned while displayed bid is not large -- iceberg absorbing, nothing to spoof with\
+      - 75% of down-pressure ticks left price pinned (3 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 25% of sells achieved a downtick\
+      - bid depth inferred from fills alone: >537 units\
+      - depth FLICKERING: a 467-unit sell broke the level that a 537-unit sell could not\
+      - episode: 1 candles, 1868 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+[20:53] INVALIDATED  close=0.05422      agg=0.909 (n=     1,978) bbo=0.427 pinned=0%\
+      - only 3 trades: flow metrics unreliable\
+      - bbo 0.43 collapsed: bid pulled, not absorbed\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[20:54] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+[21:03] DISTRIBUTION close=0.0541       agg=0.839 (n=       926) bbo=0.383 pinned=0%  (low confidence)\
+      - only 3 trades: flow metrics unreliable\
+      - agg 0.84 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[21:05] ABSORPTION   close=0.05408      agg=0.107 (n=     2,236) bbo=0.602 pinned=30%\
+      - agg 0.11 sell-pressed, 2005 net supply per 10 ticks down\
+      - bbo 0.60 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 55% of displayed bid\
+      - bid depth inferred from fills alone: >461 units\
+      - depth FLICKERING: a 1-unit sell broke the level that a 461-unit sell could not\
+      - episode: 1 candles, 2005 net supply absorbed for -0.18% (-10.00 vol-normalised)\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[21:18] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[21:26] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+[21:27] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[21:35] DISTRIBUTION close=0.05403      agg=0.913 (n=       118) bbo=0.394 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.91 buy-pressed but price failed: DISTRIBUTION\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[21:47] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[21:51] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[21:57] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[22:01] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[22:07] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[22:08] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[22:10] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[22:24] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+[22:33] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[22:34] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[22:35] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 23 duplicate book snapshots]\
+[22:37] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[22:40] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[22:41] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[22:43] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+[22:44] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[22:47] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[23:09] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[23:11] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+[23:19] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[23:34] ABSORPTION   close=0.05467      agg=0.001 (n=    16,260) bbo=0.612 pinned=22%\
+      - agg 0.00 sell-pressed, 16260 net supply per 12 ticks down\
+      - bbo 0.61 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 211% of displayed bid\
+      - bid depth inferred from fills alone: >3450 units\
+      - depth FLICKERING: a 229-unit sell broke the level that a 3450-unit sell could not\
+      - episode: 1 candles, 16260 net supply absorbed for -0.22% (-12.00 vol-normalised)\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+[23:35] INVALIDATED  close=0.05454      agg=0.019 (n=       642) bbo=0.702 pinned=0%\
+      - only 2 trades: flow metrics unreliable\
+      - 100% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[23:42] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[23:52] ABSORPTION   close=0.05472      agg=0.029 (n=       408) bbo=0.740 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.03 sell-pressed, 408 net supply per 0 ticks down\
+      - bbo 0.74 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 408 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[23:53] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+[23:54] INVALIDATED  close=0.05471      agg=0.007 (n=     1,823) bbo=0.594 pinned=0%\
+      - only 1 trades: flow metrics unreliable\
+      - 100% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[23:55] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[23:56] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+[00:05] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+[00:06] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+[00:09] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+[00:10] ABSORPTION   close=0.05446      agg=0.002 (n=     5,316) bbo=0.712 pinned=38%\
+      - agg 0.00 sell-pressed, 5316 net supply per 12 ticks down\
+      - bbo 0.71 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 60% of displayed bid\
+      - bid depth inferred from fills alone: >1098 units\
+      - depth FLICKERING: a 395-unit sell broke the level that a 1098-unit sell could not\
+      - episode: 1 candles, 5316 net supply absorbed for -0.22% (-12.00 vol-normalised)\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[00:14] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[00:21] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[00:24] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 7 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[00:48] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+[00:49] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[00:51] ABSORPTION   close=0.05455      agg=0.007 (n=     1,806) bbo=0.639 pinned=0%  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1806 net supply per 0 ticks down\
+      - bbo 0.64 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 1806 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+[00:52] INVALIDATED  close=0.0545       agg=0.007 (n=     1,780) bbo=0.652 pinned=0%\
+      - only 1 trades: flow metrics unreliable\
+      - 100% of sells moved price down: bid not holding at the touch\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[00:56] ABSORPTION   close=0.05451      agg=0.007 (n=     1,777) bbo=0.700 pinned=  n/a  (low confidence)\
+      - only 1 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 1777 net supply per 0 ticks down\
+      - bbo 0.70 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 1777 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 4 duplicate book snapshots]\
+      [filtered 0 block trades, 1 duplicate book snapshots]\
+      [filtered 0 block trades, 2 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 6 duplicate book snapshots]\
+[01:26] ABSORPTION   close=0.05449      agg=0.004 (n=     3,169) bbo=0.637 pinned=  n/a  (low confidence)\
+      - only 4 trades: flow metrics unreliable\
+      - agg 0.00 sell-pressed, 3169 net supply per 0 ticks down\
+      - bbo 0.64 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 3169 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+[01:27] ABSORPTION   close=0.05449      agg=0.005 (n=     2,458) bbo=0.670 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 2458 net supply per 0 ticks down\
+      - bbo 0.67 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 2 candles, 5627 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 23 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+[01:30] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+[01:31] ABSORPTION   close=0.05449      agg=0.004 (n=     3,450) bbo=0.616 pinned=  n/a  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - agg 0.00 sell-pressed, 3450 net supply per 0 ticks down\
+      - bbo 0.62 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - only 0% of sells achieved a downtick\
+      - CAUTION: largest absorbed sell is only 0.0% of displayed bid -- the wall was never tested\
+      - episode: 1 candles, 3450 net supply absorbed for +0.00% (+0.00 vol-normalised)\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[01:36] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[01:48] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+[01:53] GAP -- feed unhealthy (2 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 19 duplicate book snapshots]\
+      [filtered 0 block trades, 3 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 9 duplicate book snapshots]\
+      [filtered 0 block trades, 5 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[02:47] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[02:56] ABSORPTION   close=0.05446      agg=0.087 (n=    12,797) bbo=0.721 pinned=17%\
+      - agg 0.09 sell-pressed, 10593 net supply per 14 ticks down\
+      - bbo 0.72 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - wall tested: absorbed a sell worth 11% of displayed bid\
+      - bid depth inferred from fills alone: >170 and <=229 units\
+      - episode: 1 candles, 10593 net supply absorbed for -0.26% (-14.00 vol-normalised)\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[02:57] EXHAUSTION   close=0.05452      agg=0.003 (n=     4,415) bbo=0.598 pinned=0%  (low confidence)\
+      - only 2 trades: flow metrics unreliable\
+      - sell rate decayed to 0.00 with flat buying: EXHAUSTION (denominator), no demand confirmation\
+      - episode: 2 candles, 15008 net supply absorbed for -0.26% (-9.90 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+[03:04] ABSORPTION   close=0.05436      agg=0.005 (n=     2,454) bbo=0.630 pinned=67%\
+      - only 4 trades: flow metrics unreliable\
+      - agg 0.01 sell-pressed, 2454 net supply per 1 ticks down\
+      - bbo 0.63 bid-heavy\
+      - bid larger than ask in absolute size: real wall\
+      - 67% of down-pressure ticks left price pinned (2 sells absorbed vs 1 that moved it): bid refilling at tick resolution\
+      - only 25% of sells achieved a downtick\
+      - wall tested: absorbed a sell worth 128% of displayed bid\
+      - bid depth inferred from fills alone: >920 units\
+      - depth FLICKERING: a 472-unit sell broke the level that a 920-unit sell could not\
+      - episode: 1 candles, 2454 net supply absorbed for -0.02% (-1.00 vol-normalised)\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[03:14] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 13 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+[03:25] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+[03:27] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+[03:28] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 8 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 11 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+[03:34] GAP -- feed unhealthy (3 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[03:43] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 12 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 17 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 16 duplicate book snapshots]\
+      [filtered 0 block trades, 15 duplicate book snapshots]\
+[03:53] GAP -- feed unhealthy (1 book samples). Candle NOT fed to the model.\
+      [filtered 0 block trades, 10 duplicate book snapshots]\
+      [filtered 0 block trades, 18 duplicate book snapshots]\
+      [filtered 0 block trades, 14 duplicate book snapshots]\
+[03:57] GAP -- feed unhealthy (4 book samples). Candle NOT fed to the model.\
+\
+}
