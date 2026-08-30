@@ -93,9 +93,16 @@ class Runner:
             atr = (f"{c.absorption_tick_ratio:.0%}"
                    if c.absorption_tick_ratio is not None else "  n/a")
             flag = "" if result.confident else "  (low confidence)"
+            # Absolute depth is logged alongside the ratio because the ratio is
+            # blind to which side moved, and because depth_tot (bid+ask) is the
+            # only feature that has reached significance on POPCAT. Without
+            # these two numbers a console log cannot test that hypothesis --
+            # it needs the raw tape, which is a much larger file to move around.
+            bsz = f"{c.bid_sz_avg:,.0f}" if c.bid_sz_avg is not None else "None"
+            asz = f"{c.ask_sz_avg:,.0f}" if c.ask_sz_avg is not None else "None"
             print(f"[{fmt_minute(em.minute_start_ms)}] {result.phase.value:<12} "
                   f"close={c.close:<12.8g} agg={agg} (n={c.agg_n:>10,.0f}) "
-                  f"bbo={bbo} pinned={atr}{flag}")
+                  f"bbo={bbo} pinned={atr} bid_sz={bsz:>10} ask_sz={asz:>10}{flag}")
             for r in result.reasons:
                 print(f"      - {r}")
 
