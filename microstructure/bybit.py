@@ -70,6 +70,7 @@ class Emitted:
     synthetic: bool = False  # reconstructed for a minute with no messages
     dropped_block_trades: int = 0
     dropped_duplicate_books: int = 0
+    raw_book_messages: int = 0  # BEFORE dedup -- the health signal
 
     @property
     def usable(self) -> bool:
@@ -99,6 +100,7 @@ class BybitAssembler:
     _prev_tick_up: Optional[bool] = field(default=None, init=False)
     _dropped_blocks: int = field(default=0, init=False)
     _dropped_dupes: int = field(default=0, init=False)
+    _raw_books: int = field(default=0, init=False)
     # Smallest non-zero price increment actually observed on the tape. Used to
     # catch a misconfigured tick_size, which silently scales every tick-based
     # metric -- a TRXUSDT run was collected at 0.00001 when the real tick is
@@ -107,20 +109,36 @@ class BybitAssembler:
     _increment_hist: dict = field(default_factory=dict, init=False)
     _last_seen_price: Optional[float] = field(default=None, init=False)
 
-    def observed_tick_size(self) -> Optional[float]:
-        """Most COMMON non-zero price increment, not the smallest.
+    def observed_tick_size(self, min_share: float = 0.02) -> Optional[float]:
+        """Smallest price increment that occurs with meaningful FREQUENCY.
 
-        The minimum is maximally sensitive to a single outlier. Real tapes
-        contain a few sub-tick prints -- TRXUSDT showed 5 half-tick prices out
-        of 32,361, all around 14.7 units and none flagged RPI -- and using the
-        minimum let those 5 prints fire a false tick-size warning across the
-        whole run.
+        Two simpler heuristics both fail, in opposite ways:
 
-        The authoritative source is instruments-info priceFilter.tickSize from
-        REST; this is a fallback for when it has not been supplied.
+          minimum  -- a handful of sub-tick prints poisons it. TRXUSDT showed 5
+                      half-tick prices out of 32,361, none flagged RPI, and they
+                      fired a false warning across two entire runs.
+          mode     -- wrong when trades skip ticks. On POPCATUSDT at ~5 trades
+                      per minute, consecutive prints routinely jump several
+                      ticks, so the modal gap was 5e-05 against a true tick of
+                      1e-05, again firing a false warning.
+
+        Taking the smallest increment that accounts for at least min_share of
+        observations is robust to both: rare sub-tick prints fall below the
+        share floor, while a genuinely common single-tick step clears it.
+
+        Still only a fallback. The authoritative source is
+        instruments-info priceFilter.tickSize from REST.
         """
         if not self._increment_hist:
             return self._min_increment
+        total = sum(self._increment_hist.values())
+        if total == 0:
+            return self._min_increment
+        frequent = [inc for inc, cnt in self._increment_hist.items()
+                    if cnt / total >= min_share]
+        if frequent:
+            return min(frequent)
+        # Nothing clears the floor (very few observations): fall back to mode.
         return max(self._increment_hist.items(), key=lambda kv: kv[1])[0]
 
     def tick_size_warning(self, tol: float = 1.5) -> Optional[str]:
@@ -222,6 +240,11 @@ class BybitAssembler:
 
         out = self._advance(ts_ms)
 
+        # Count the message BEFORE dedup. Feed health must be judged on raw
+        # arrivals: a still book sends ~20 identical-u heartbeats per minute, so
+        # judging health on deduped samples marks a quiet market as a dead feed.
+        self._raw_books += 1
+
         # The 3-second republish carries an identical u. Counting it would
         # bias the time-averaged bbo toward stale quiet-period state.
         u = data.get("u")
@@ -280,13 +303,17 @@ class BybitAssembler:
             agg_k=self.agg_k,
         )
 
-        healthy = len(self._book) >= MIN_BOOK_SAMPLES_HEALTHY
+        # Health uses RAW arrivals, not deduped samples. orderbook.1 pushes on
+        # change and at least every 3s, so a connected feed always delivers
+        # roughly 20 messages a minute regardless of how still the book is.
+        healthy = self._raw_books >= MIN_BOOK_SAMPLES_HEALTHY
         emitted = Emitted(
             candle=candle,
             minute_start_ms=start,
             feed_healthy=healthy,
             dropped_block_trades=self._dropped_blocks,
             dropped_duplicate_books=self._dropped_dupes,
+            raw_book_messages=self._raw_books,
         )
 
         if self._trades:
@@ -294,7 +321,7 @@ class BybitAssembler:
             self._prev_tick_up = candle.last_tick_up
         self._trades, self._book = [], []
         self._seen_u.clear()
-        self._dropped_blocks = self._dropped_dupes = 0
+        self._dropped_blocks = self._dropped_dupes = self._raw_books = 0
         return emitted
 
     def _synthetic_gap(self, start: int) -> Emitted:
