@@ -219,6 +219,38 @@ check("unchanged price in the NEW candle inherits prior direction -> ZeroMinusTi
       nxt.candle.zero_minus_ticks == 1)
 check("not left undetermined", nxt.candle.undetermined_ticks == 0)
 
+print("\n6b. A still book is not a dead feed")
+# ==========================================================================
+# orderbook.1 heartbeats every 3s with an UNCHANGED u when nothing moves. Those
+# are deduped for the bbo average, so judging feed health on deduped samples
+# marks a perfectly connected quiet market as a disconnection. A real POPCAT run
+# lost 61 of 177 candles (34%) to this, each reporting 1-4 "book samples" when
+# ~20 messages had actually arrived.
+msgs = [book_msg(M0 + i * 3000, 500_000, 500_000, u=7777) for i in range(20)]
+msgs.append(trade_msg(M0 + 1000, "Sell", 100, 0.04901, "MinusTick"))
+msgs.append(trade_msg(M1 + 1000, "Sell", 100, 0.04901, "MinusTick"))
+ems = feed(BybitAssembler(tick_size=TICK), msgs)
+quiet = next(e for e in ems if e.minute_start_ms == M0)
+check(f"20 heartbeats deduped to {quiet.candle.bbo_samples} sample",
+      quiet.candle.bbo_samples == 1)
+# 19 of 20, not 20: the first heartbeat's cts lands in the previous minute,
+# the same boundary attribution verified in test 5.
+check(f"but raw_book_messages = {quiet.raw_book_messages}",
+      quiet.raw_book_messages == 19)
+check("so the candle is HEALTHY, not a gap", quiet.feed_healthy is True)
+check("and therefore usable", quiet.usable is True)
+print("  -> health is judged on arrivals, the bbo average on unique states")
+
+# A true disconnect still fails.
+msgs = [book_msg(M0 + i * 3000, 500_000, 500_000, u=8000 + i) for i in range(2)]
+msgs.append(trade_msg(M0 + 1000, "Sell", 100, 0.04901, "MinusTick"))
+msgs.append(trade_msg(M1 + 1000, "Sell", 100, 0.04901, "MinusTick"))
+ems = feed(BybitAssembler(tick_size=TICK), msgs)
+dead = next(e for e in ems if e.minute_start_ms == M0)
+check(f"only {dead.raw_book_messages} raw arrivals -> still unhealthy",
+      dead.feed_healthy is False)
+
+# ==========================================================================
 print("\n7. Misconfigured tick_size is detected from the tape")
 # ==========================================================================
 # Reproduces the real mistake: TRXUSDT collected with --tick-size 0.00001
